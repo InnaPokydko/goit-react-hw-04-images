@@ -6,8 +6,10 @@ import { Overlay, ModalImg } from './Modal.styled';
 const modalRoot = document.querySelector('#modal-root');
 
 export default function Modal({ item, onClose }) {
+
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
+    
     function handleKeyDown(e) {
       if (e.code === 'Escape') {
         onClose();
